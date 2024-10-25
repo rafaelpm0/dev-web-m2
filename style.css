@@ -24,6 +24,7 @@ body {
     gap: 32px;
     margin: 0;
     color: var(--cor-texto);
+    justify-content: center;
 }
 
 header, main {
