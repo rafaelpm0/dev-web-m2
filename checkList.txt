@@ -1,11 +1,11 @@
-1)	Formulário: Desenvolva um formulário de cadastro de obras de museu de contenha os seguintes campos:
+1)	Formulário: Desenvolva um formulário de cadastro de obras de museu de contenha os seguintes campos: TERMINADO
 
     a)	Nome da obra (texto livre, única linha, limite 100 caracteres) ok
     b)	Autor (texto livre, única linha, limite 100 caracteres) ok
-    c)	Ano da obra (texto livre, única linha, limite 4 caracteres) o
-    d)	Período da obra (opções: vazio, d.C, a.C.) o
-    e)	Tipo (opções: vazio, quadro, escultura, outro) o
-    f)	Detalhamento (texto livre, múltiplas linhas, limite 2000 caracteres) o
+    c)	Ano da obra (texto livre, única linha, limite 4 caracteres) ok
+    d)	Período da obra (opções: vazio, d.C, a.C.) ok
+    e)	Tipo (opções: vazio, quadro, escultura, outro) ok
+    f)	Detalhamento (texto livre, múltiplas linhas, limite 2000 caracteres) ok
 
 2)	Validação: Faça uma função para validar os dados do formulário.
 

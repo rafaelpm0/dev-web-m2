@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Page</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="/scripts/script.js" defer></script>
   </head>
   <body>
     <!--
@@ -28,15 +28,18 @@
           <input type="text" id="nomeAutor" name="nomeAutor" maxlength="100" />
           <label for="anoObra">Nome do Autor:</label>
           <input type="text" id="anoObra" name="anoObra" maxlength="4" />
+          <label for="periodoObra">Periodo da obra:</label>
           <select id="periodoObra" name="periodoObra">
             <option value="0" selected>Não informardo</option>
-            <option value="1">A.C (Antes de Cristo)</option>
-            <option value="2">D.C (Depois de Cristo)</option>
+            <option value="A.C">A.C (Antes de Cristo)</option>
+            <option value="D.C ">D.C (Depois de Cristo)</option>
         </select>
+        <label for="tipoObra">Tipo:</label>
         <select id="tipoObra" name="tipoObra">
           <option value="0" selected>Não informardo</option>
-          <option value="0">Não informardo</option>
-          <option value="0">Não informardo</option>
+          <option value="Quadro">Quadro</option>
+          <option value="Escultura">Escultura</option>
+          <option value="Outro">Outro</option>
       </select>
        <label for="detalhamentoObra">Detalhamento da obra:</label>
        <textarea id="detalhamentoObra" name="detalhamentoObra" maxlength="2000"></textarea>
@@ -48,7 +51,21 @@
     <main>
       <div>
         <span> teste de exibicao lista </span>
-        <ul id="dataForm"></ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome da Obra</th>
+              <th>Nome do Autor</th>
+              <th>Ano da Obra</th>
+              <th>Periodo da Obra</th>
+              <th>Tipo da Obra</th>
+              <th>Detalhamento da Obra</th>
+            </tr>
+          </thead>
+          <tbody id="dataForm">
+
+          </tbody>
+        </table>
       </div>
     </main>
   </body>
