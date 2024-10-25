@@ -46,3 +46,10 @@ header, main {
     text-decoration: none;
     margin-bottom: 8px;
 }
+
+/* estilização formulário */
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

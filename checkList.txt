@@ -1,0 +1,56 @@
+1)	Formulário: Desenvolva um formulário de cadastro de obras de museu de contenha os seguintes campos:
+
+    a)	Nome da obra (texto livre, única linha, limite 100 caracteres) ok
+    b)	Autor (texto livre, única linha, limite 100 caracteres) ok
+    c)	Ano da obra (texto livre, única linha, limite 4 caracteres) o
+    d)	Período da obra (opções: vazio, d.C, a.C.) o
+    e)	Tipo (opções: vazio, quadro, escultura, outro) o
+    f)	Detalhamento (texto livre, múltiplas linhas, limite 2000 caracteres) o
+
+2)	Validação: Faça uma função para validar os dados do formulário.
+
+    a.	Todos os campos são obrigatórios, exceto o detalhamento.
+    b.	O nome da obra deve ter no mínimo 6 caracteres.
+    c.	O nome do autor deve ter no mínimo 10 caracteres.
+    d.	O ano da obra dever ser um número válido.
+    e.	Os campos de seleção devem ter um valor válido selecionado, o valor vazio não é considerado válido.
+    f.	Após processar a função deve-se:
+    •	Exibir uma lista (elemento ul) exibindo um item para cada campo que falhou na validação e uma mensagem explicando o motivo. 
+    •	Exibir cada campo que falhou na validação com as bordas vermelhas.
+    •	A lista de mensagens e as bordas devem ser limpas no quando o usuário tentar nova validação dos dados.
+
+3)	Registro: O formulário deve conter um botão para ativar a validação. Uma vez que os dados estiverem validados estes devem ser registrados em uma tabela.
+
+    a.	A tabela deve ter uma coluna para cada campo do formulário, exceto o campo detalhamento.
+    b.	Ao clicar em uma linha de dados da tabela, deve ser exibido o conteúdo do campo detalhamento.
+    c.	Cada linha de dados da tabela deve conter um botão para exclusão da linha. Antes de confirmar a execução da exclusão, deve ser questionado ao usuário a confirmação.
+
+
+4)	Tema CSS: Aplicar o tema de estilo desenvolvido durante a M2 nas atividades da disciplina (Arquivo – Atividade 6).
+1. Crie uma biblioteca (tema) CSS com as seguintes características:
+    a)	Todas as tabelas deverão conter:
+    a.	Padding das células (td) de 20px
+    b.	Cabeçalho (th) com cor de fundo (a escolher)
+    c.	Cabeçalho com borda inferior solida com 3px e cor a definir. 
+    d.	Pseudo class das linhas (tr) alterando a cor de fundo para a linha selecionada.
+    e.	Texto com tamanho em 1em.
+    f.	As células devem ter o alinhamento vertical para parte superior (top)
+    g.	As células devem forçar a quebra palavras (wordwrap) automaticamente.
+    h.	As células devem ter seu conteúdo com alinhamento horizontal justificado (justify)
+    i.	A última linha da tabela deve ter a borda inferior solida com  1px de espessura e cor a definir.
+
+b)	Todos os campos (input, textarea, select) deverão conter:
+    a.	Fonte em tamanho 1.5em.
+    b.	Campo que estiver sendo preenchido deve ter cor de fundo em destaque.
+    c.	Padding 5px.
+    d.	Devem ter borda sólida com 1px de espessura, com cor a escura.
+    e.	Os labels devem estar em negrito.
+
+    c)	Todo conteúdo da página deve ficar a 2em de distância das laterais esquerda e direita.
+    d)	Todo conteúdo da página deve ser apresentado com a mesma fonte, que não seja a padrão do browser.
+    e)	Todo texto da página, esteja em parágrafos (p), células (td), caixas (span, div, etc) devem ter as linhas com altura de 1.6,
+    aumentando assim o espaçamento padrão.
+
+2. Cria uma página html que possibilite que todos os itens da biblioteca sejam testados. A página deve apenas importar o arquivo
+ .css da biblioteca e seus efeitos devem ser aplicados aos elementos desta página sem necessidade de nenhuma outra intervenção.
+

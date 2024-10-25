@@ -7,36 +7,49 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-    <body>
-        <header>
+  <body>
+    <!--
+      ver depois se vamos deixar o header ou não
+              <header>
             <span>ADD ICON/LOGO</span>
             <div class="container_header_options">
               <a href="">Formulário</a>
               <a href="">Tabela</a>
             </div>
           </header>
-          <main>
-            <form id="submitForm"  method="POST">
-                <div class="form-field">
-                    <label for="nomeObra">Nome da obra:</label>
-                    <input type="text" id="nomeObra" name="nomeObra" maxlength="100">
-                </div>
-                <div class="form-field">
-                    <label for="nomeAutor">Nome do Autor:</label>
-                    <input type="text" id="nomeAutor" name="nomeAutor" maxlength="100">
-                </div>
-                <button type="submit">Enviar</button>
-            </form>
-          </main>
-          <main>
+      -->
 
-            <div>
-                <span> teste de exibicao lista </span>
-                <ul id="dataForm"></ul>
-              </div>
-          </main>
-          
-    
-    </body>
+    <main>
+      <form id="submitForm" method="POST">
+        <div class="form-fields">
+          <label for="nomeObra">Nome da obra:</label>
+          <input type="text" id="nomeObra" name="nomeObra" maxlength="100" />
+          <label for="nomeAutor">Nome do Autor:</label>
+          <input type="text" id="nomeAutor" name="nomeAutor" maxlength="100" />
+          <label for="anoObra">Nome do Autor:</label>
+          <input type="text" id="anoObra" name="anoObra" maxlength="4" />
+          <select id="periodoObra" name="periodoObra">
+            <option value="0" selected>Não informardo</option>
+            <option value="1">A.C (Antes de Cristo)</option>
+            <option value="2">D.C (Depois de Cristo)</option>
+        </select>
+        <select id="tipoObra" name="tipoObra">
+          <option value="0" selected>Não informardo</option>
+          <option value="0">Não informardo</option>
+          <option value="0">Não informardo</option>
+      </select>
+       <label for="detalhamentoObra">Detalhamento da obra:</label>
+       <textarea id="detalhamentoObra" name="detalhamentoObra" maxlength="2000"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <main>
+      <div>
+        <span> teste de exibicao lista </span>
+        <ul id="dataForm"></ul>
+      </div>
+    </main>
+  </body>
 </html>
-
