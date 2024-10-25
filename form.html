@@ -6,6 +6,7 @@
     <title>Form Page</title>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="scripts/script.js" defer></script>
+    <script type="module" src="scripts/tabela.js" defer></script>
   </head>
   <body>
     <!--
@@ -18,7 +19,10 @@
             </div>
           </header>
       -->
-
+    <div id="modal" class="modal" >
+      <button id="closeModal" onClick="deactivateModal()">X</button>
+      <div id="modalContent" class="modalContent"></div>
+    </div>
     <main>
       <form id="submitForm" method="POST">
         <div class="form-fields">
@@ -44,7 +48,6 @@
        <label for="detalhamentoObra">Detalhamento da obra:</label>
        <textarea id="detalhamentoObra" name="detalhamentoObra" maxlength="2000"></textarea>
         </div>
-
         <button type="submit">Enviar</button>
       </form>
     </main>

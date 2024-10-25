@@ -42,3 +42,19 @@ export function atualizarLista(dataForm, listaDeDados) {
       document.getElementById("detalhamentoObra").value = "";
 
     };
+
+    // função para desativar o modal
+    export function deactivateModal() {
+      const modal = document.getElementById("modal");
+      modal.className = "modal";
+    }
+
+    export function modalErrorValidation(ul){
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      
+      modal.className = "modal active";
+      modalContent.innerHTML = "";
+      modalContent.appendChild(ul);
+
+    }

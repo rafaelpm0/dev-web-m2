@@ -1,4 +1,4 @@
-import { atualizarLista, limparInputs } from "./tabela.js";
+import { atualizarLista, limparInputs, modalErrorValidation } from "./tabela.js";
 
 export function handleForm(dataForm, listaDeDados, dataObra) {
     listaDeDados.push(dataObra);
@@ -14,8 +14,23 @@ export function handleForm(dataForm, listaDeDados, dataObra) {
         tipoObra: typeof tipoObra === 'string' && tipoObra !== '0'
     };
 
+    const mensagensErro = {
+        nomeObra: "Nome da obra deve ter pelo menos 6 caracteres.",
+        nomeAutor: "Nome do autor deve ter pelo menos 10 caracteres.",
+        anoObra: "Ano da obra deve ter exatamente 4 caracteres.",
+        periodoObra: "Período da obra deve ser selecionado.",
+        tipoObra: "Tipo de obra deve ser selecionado."
+    };
+    
+    const ul = document.createElement("ul");
+
     Object.keys(validacoes).forEach(id => {
         document.getElementById(id).className = validacoes[id] ? "valid" : "notValid";
+        if(!validacoes[id]){
+            const li = document.createElement("li");
+            li.textContent = mensagensErro[id];
+            ul.appendChild(li);
+        }
     });
 
     const todosValidos = Object.values(validacoes).every(value => value)
@@ -23,6 +38,8 @@ export function handleForm(dataForm, listaDeDados, dataObra) {
     if(todosValidos){
         atualizarLista(dataForm, listaDeDados);
         limparInputs();
+    }else{
+        modalErrorValidation(ul);
     }
 
     

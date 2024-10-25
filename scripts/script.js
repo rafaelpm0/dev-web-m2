@@ -1,3 +1,4 @@
+import { deactivateModal } from "./tabela.js";
 import { handleForm } from "./validacao.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -30,4 +31,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     handleForm(dataForm, listaDeDados, dataObra); // a inclusão na tabela e na lista esta dentro de esta dentro da função
     
   });
+
+  // monitora o botão de fechar
+    const closeModal = document.getElementById("closeModal");
+
+    closeModal.addEventListener("click", () => {
+      deactivateModal();
+    });
+
+
+
+
 });

@@ -1,4 +1,4 @@
-1)	Formulário: Desenvolva um formulário de cadastro de obras de museu de contenha os seguintes campos: TERMINADO
+1)	Formulário: Desenvolva um formulário de cadastro de obras de museu de contenha os seguintes campos: COMPLETO
 
     a)	Nome da obra (texto livre, única linha, limite 100 caracteres) ok
     b)	Autor (texto livre, única linha, limite 100 caracteres) ok
@@ -7,17 +7,17 @@
     e)	Tipo (opções: vazio, quadro, escultura, outro) ok
     f)	Detalhamento (texto livre, múltiplas linhas, limite 2000 caracteres) ok
 
-2)	Validação: Faça uma função para validar os dados do formulário.
-
-    a.	Todos os campos são obrigatórios, exceto o detalhamento.
-    b.	O nome da obra deve ter no mínimo 6 caracteres.
-    c.	O nome do autor deve ter no mínimo 10 caracteres.
-    d.	O ano da obra dever ser um número válido.
-    e.	Os campos de seleção devem ter um valor válido selecionado, o valor vazio não é considerado válido.
+2)	Validação: Faça uma função para validar os dados do formulário. COMPLETO
+ 
+    a.	Todos os campos são obrigatórios, exceto o detalhamento. ok
+    b.	O nome da obra deve ter no mínimo 6 caracteres. ok 
+    c.	O nome do autor deve ter no mínimo 10 caracteres. ok
+    d.	O ano da obra dever ser um número válido. ok
+    e.	Os campos de seleção devem ter um valor válido selecionado, o valor vazio não é considerado válido. ok
     f.	Após processar a função deve-se:
-    •	Exibir uma lista (elemento ul) exibindo um item para cada campo que falhou na validação e uma mensagem explicando o motivo. 
-    •	Exibir cada campo que falhou na validação com as bordas vermelhas.
-    •	A lista de mensagens e as bordas devem ser limpas no quando o usuário tentar nova validação dos dados.
+    •	Exibir uma lista (elemento ul) exibindo um item para cada campo que falhou na validação e uma mensagem explicando o motivo. ok
+    •	Exibir cada campo que falhou na validação com as bordas vermelhas.  ok 
+    •	A lista de mensagens e as bordas devem ser limpas no quando o usuário tentar nova validação dos dados. ok 
 
 3)	Registro: O formulário deve conter um botão para ativar a validação. Uma vez que os dados estiverem validados estes devem ser registrados em uma tabela.
 
