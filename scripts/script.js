@@ -1,18 +1,10 @@
-import { atualizarLista, limparInputs } from "./tabela.js";
+import { handleForm } from "./validacao.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
   //variavel de controle
   const listaDeDados = [];
   let id = 1;
   const dataForm = document.getElementById("dataForm");
-
-
-  listaDeDados.forEach((item) => {
-    dataForm.innerHTML = "";
-    const li = document.createElement("li");
-    li.textContent = `Nome da Obra: ${item.nomeObra} - Nome do Autor: ${item.nomeAutor}`;
-    dataForm.appendChild(li);
-  });
 
   //controle para fazer o submit e atualizar a lista
   const formulario = document.getElementById("submitForm");
@@ -25,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const periodoObra = document.getElementById("periodoObra").value;
     const tipoObra = document.getElementById("tipoObra").value;
     const detalhamentoObra = document.getElementById("detalhamentoObra").value;
-    listaDeDados.push({
+    const dataObra = {
       id,
       nomeObra,
       nomeAutor,
@@ -33,9 +25,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
       periodoObra,
       tipoObra,
       detalhamentoObra,   
-    });
+    }  
     id++;
-    atualizarLista(dataForm, listaDeDados); // atualizar a lista, precisa transformar em tabela ainda
-    limparInputs();
+    handleForm(dataForm, listaDeDados, dataObra); // a inclusão na tabela e na lista esta dentro de esta dentro da função
+    
   });
 });
