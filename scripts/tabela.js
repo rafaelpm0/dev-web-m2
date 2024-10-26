@@ -30,7 +30,7 @@ export function atualizarLista(dataForm, listaDeDados) {
       row.appendChild(cellDetalhamentoObra);
 
       const cellButtomDelete = document.createElement("td");
-      cellButtomDelete.innerHTML = "<button id='deletarObra' class='btn btn-danger' onclick='deletarObra("+item.id+")'>Deletar</button>";
+      cellButtomDelete.innerHTML = "<button class='btn btn-danger' onclick='deletarObraModal("+item.id+")'>Deletar</button>";
       row.appendChild(cellButtomDelete);
   
       dataForm.appendChild(row);
@@ -64,7 +64,21 @@ export function atualizarLista(dataForm, listaDeDados) {
 
     }
 
+    export function deletarObraModal(id){
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      const div = document.createElement("div");
+      div.className = 'deleteContainer';
+      div.innerHTML = `<p>Deseja realmente deletar a obra?</p>
+      <button class='btn btn-danger' onclick='deletarObra(${id})'>Sim</button>
+      <button class='btn btn-primary' onclick='deactivateModal()'>Não</button>`;
+      modal.className = "modal active";
+      modalContent.innerHTML = "";
+      modalContent.appendChild(div);
+      
+    }
+
     export function deletarObra(id){
       document.getElementById(`data-row-${id}`).remove();
-      
+      deactivateModal();
     }

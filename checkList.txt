@@ -24,7 +24,7 @@
     a.	A tabela deve ter uma coluna para cada campo do formulário, exceto o campo detalhamento.
     b.	Ao clicar em uma linha de dados da tabela, deve ser exibido o conteúdo do campo detalhamento.
     c.	Cada linha de dados da tabela deve conter um botão para exclusão da linha. Antes de confirmar a execução da exclusão, 
-    deve ser questionado ao usuário a confirmação. feito parcialmente
+    deve ser questionado ao usuário a confirmação. feito
 
 
 4)	Tema CSS: Aplicar o tema de estilo desenvolvido durante a M2 nas atividades da disciplina (Arquivo – Atividade 6).

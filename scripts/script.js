@@ -1,4 +1,4 @@
-import { deactivateModal, deletarObra } from "./tabela.js";
+import { deactivateModal, deletarObraModal, deletarObra } from "./tabela.js";
 import { handleForm } from "./validacao.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   window.deactivateModal = deactivateModal;
+  window.deletarObraModal = deletarObraModal;
   window.deletarObra = deletarObra;
 
 
