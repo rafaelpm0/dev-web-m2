@@ -1,4 +1,4 @@
-import { deactivateModal } from "./tabela.js";
+import { deactivateModal, deletarObra } from "./tabela.js";
 import { handleForm } from "./validacao.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -32,14 +32,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
   });
 
-  // monitora o botão de fechar
-    const closeModal = document.getElementById("closeModal");
-
-    closeModal.addEventListener("click", () => {
-      deactivateModal();
-    });
-
-
+  window.deactivateModal = deactivateModal;
+  window.deletarObra = deletarObra;
 
 
 });

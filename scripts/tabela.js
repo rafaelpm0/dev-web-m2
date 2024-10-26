@@ -2,6 +2,7 @@ export function atualizarLista(dataForm, listaDeDados) {
     dataForm.innerHTML = "";
     listaDeDados.forEach((item) => {
       const row = document.createElement("tr"); // Cria uma nova linha
+      row.id = `data-row-${item.id}` // adicionar uma id para linha da lista
   
       // Cria e insere células na linha
       const cellNomeObra = document.createElement("td");
@@ -27,6 +28,10 @@ export function atualizarLista(dataForm, listaDeDados) {
       const cellDetalhamentoObra = document.createElement("td");
       cellDetalhamentoObra.textContent = item.detalhamentoObra;
       row.appendChild(cellDetalhamentoObra);
+
+      const cellButtomDelete = document.createElement("td");
+      cellButtomDelete.innerHTML = "<button id='deletarObra' class='btn btn-danger' onclick='deletarObra("+item.id+")'>Deletar</button>";
+      row.appendChild(cellButtomDelete);
   
       dataForm.appendChild(row);
     });
@@ -57,4 +62,9 @@ export function atualizarLista(dataForm, listaDeDados) {
       modalContent.innerHTML = "";
       modalContent.appendChild(ul);
 
+    }
+
+    export function deletarObra(id){
+      document.getElementById(`data-row-${id}`).remove();
+      
     }
