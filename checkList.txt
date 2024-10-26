@@ -19,12 +19,13 @@
     •	Exibir cada campo que falhou na validação com as bordas vermelhas.  ok 
     •	A lista de mensagens e as bordas devem ser limpas no quando o usuário tentar nova validação dos dados. ok 
 
-3)	Registro: O formulário deve conter um botão para ativar a validação. Uma vez que os dados estiverem validados estes devem ser registrados em uma tabela.
+3)	Registro: O formulário deve conter um botão para ativar a validação. 
+Uma vez que os dados estiverem validados estes devem ser registrados em uma tabela.
 
-    a.	A tabela deve ter uma coluna para cada campo do formulário, exceto o campo detalhamento.
+    a.	A tabela deve ter uma coluna para cada campo do formulário, exceto o campo detalhamento. ok 
     b.	Ao clicar em uma linha de dados da tabela, deve ser exibido o conteúdo do campo detalhamento.
     c.	Cada linha de dados da tabela deve conter um botão para exclusão da linha. Antes de confirmar a execução da exclusão, 
-    deve ser questionado ao usuário a confirmação. feito
+    deve ser questionado ao usuário a confirmação. ok
 
 
 4)	Tema CSS: Aplicar o tema de estilo desenvolvido durante a M2 nas atividades da disciplina (Arquivo – Atividade 6).

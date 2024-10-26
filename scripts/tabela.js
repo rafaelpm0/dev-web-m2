@@ -3,36 +3,32 @@ export function atualizarLista(dataForm, listaDeDados) {
     listaDeDados.forEach((item) => {
       const row = document.createElement("tr"); // Cria uma nova linha
       row.id = `data-row-${item.id}` // adicionar uma id para linha da lista
-  
+      
       // Cria e insere células na linha
       const cellNomeObra = document.createElement("td");
-      cellNomeObra.textContent = item.nomeObra;
+      cellNomeObra.innerHTML = linkDetalhamento(item.detalhamentoObra, item.nomeObra);
       row.appendChild(cellNomeObra);
   
       const cellNomeAutor = document.createElement("td");
-      cellNomeAutor.textContent = item.nomeAutor;
+      cellNomeAutor.textContent = linkDetalhamento(item.detalhamentoObra, item.nomeAutor);
       row.appendChild(cellNomeAutor);
   
       const cellAnoObra = document.createElement("td");
-      cellAnoObra.textContent = item.anoObra;
+      cellAnoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.anoObra);
       row.appendChild(cellAnoObra);
   
       const cellPeriodoObra = document.createElement("td");
-      cellPeriodoObra.textContent = item.periodoObra;
+      cellPeriodoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.periodoObra);
       row.appendChild(cellPeriodoObra);
   
       const cellTipoObra = document.createElement("td");
-      cellTipoObra.textContent = item.tipoObra;
+      cellTipoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.tipoObra);
       row.appendChild(cellTipoObra);
-  
-      const cellDetalhamentoObra = document.createElement("td");
-      cellDetalhamentoObra.textContent = item.detalhamentoObra;
-      row.appendChild(cellDetalhamentoObra);
-
+      
       const cellButtomDelete = document.createElement("td");
       cellButtomDelete.innerHTML = "<button class='btn btn-danger' onclick='deletarObraModal("+item.id+")'>Deletar</button>";
       row.appendChild(cellButtomDelete);
-  
+
       dataForm.appendChild(row);
     });
   }
@@ -81,4 +77,23 @@ export function atualizarLista(dataForm, listaDeDados) {
     export function deletarObra(id){
       document.getElementById(`data-row-${id}`).remove();
       deactivateModal();
+    }
+
+    export function showDetalhamentoModal(detalhamento){
+      const modal = document.getElementById("modal");
+      const modalContent = document.getElementById("modalContent");
+      const div = document.createElement("div");
+      div.className = 'detalhamentoContainer';
+      if(detalhamento === ""){
+        detalhamento = "Detalhamento não informado";
+      }
+      div.innerHTML = `<p>${detalhamento}</p>
+      <button class='btn btn-primary' onclick='deactivateModal()'>Fechar</button>`;
+      modal.className = "modal active";
+      modalContent.innerHTML = "";
+      modalContent.appendChild(div);
+    }
+
+    function linkDetalhamento(detalhamento, conteudo){
+      return `<a onclick='showDetalhamentoModal("${detalhamento}")'>${conteudo}</a>`;
     }
