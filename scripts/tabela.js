@@ -10,19 +10,19 @@ export function atualizarLista(dataForm, listaDeDados) {
       row.appendChild(cellNomeObra);
   
       const cellNomeAutor = document.createElement("td");
-      cellNomeAutor.textContent = linkDetalhamento(item.detalhamentoObra, item.nomeAutor);
+      cellNomeAutor.innerHTML = linkDetalhamento(item.detalhamentoObra, item.nomeAutor);
       row.appendChild(cellNomeAutor);
   
       const cellAnoObra = document.createElement("td");
-      cellAnoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.anoObra);
+      cellAnoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.anoObra);
       row.appendChild(cellAnoObra);
   
       const cellPeriodoObra = document.createElement("td");
-      cellPeriodoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.periodoObra);
+      cellPeriodoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.periodoObra);
       row.appendChild(cellPeriodoObra);
   
       const cellTipoObra = document.createElement("td");
-      cellTipoObra.textContent =  linkDetalhamento(item.detalhamentoObra, item.tipoObra);
+      cellTipoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.tipoObra);
       row.appendChild(cellTipoObra);
       
       const cellButtomDelete = document.createElement("td");
