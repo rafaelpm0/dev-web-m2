@@ -8,24 +8,11 @@
     <script type="module" src="scripts/script.js" defer></script>
     <script type="module" src="scripts/tabela.js" defer></script>
   </head>
-  <body>
-    <!--
-      ver depois se vamos deixar o header ou não
-              <header>
-            <span>ADD ICON/LOGO</span>
-            <div class="container_header_options">
-              <a href="">Formulário</a>
-              <a href="">Tabela</a>
-            </div>
-          </header>
-      -->
-    
+  <body>  
     <div id="modal" class="modal" >
       <button onclick="deactivateModal()">X</button> 
       <div id="modalContent" class="modalContent"></div>
     </div>
-    
-
     <main>
       <form id="submitForm" method="POST">
         <div class="form-fields">
@@ -34,7 +21,7 @@
           <label for="nomeAutor">Nome do Autor:</label>
           <input type="text" id="nomeAutor" name="nomeAutor" maxlength="100" />
           <label for="anoObra">Ano: </label>
-          <input type="text" id="anoObra" name="anoObra" maxlength="4" />
+          <input type="number" id="anoObra" name="anoObra" min="1900" max="2200" pattern="\d{4}" title="O ano deve ter exatamente 4 dígitos" />
           <label for="periodoObra">Periodo da obra:</label>
           <select id="periodoObra" name="periodoObra">
             <option value="0" selected>Não informardo</option>

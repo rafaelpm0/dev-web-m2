@@ -1,7 +1,7 @@
 import { atualizarLista, limparInputs, modalErrorValidation } from "./tabela.js";
 
 export function handleForm(dataForm, listaDeDados, dataObra) {
-    listaDeDados.push(dataObra);
+    
 
     // Validação dos campos
     const { nomeObra, nomeAutor, anoObra, periodoObra, tipoObra } = dataObra;
@@ -36,6 +36,7 @@ export function handleForm(dataForm, listaDeDados, dataObra) {
     const todosValidos = Object.values(validacoes).every(value => value)
 
     if(todosValidos){
+        listaDeDados.push(dataObra);
         atualizarLista(dataForm, listaDeDados);
         limparInputs();
     }else{
