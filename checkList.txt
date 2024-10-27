@@ -35,21 +35,21 @@ SEGUINDO AS ESPECIFICAÇÕES
 1. Crie uma biblioteca (tema) CSS com as seguintes características:
     a)	Todas as tabelas deverão conter:
     a.	Padding das células (td) de 20px ok 
-    b.	Cabeçalho (th) com cor de fundo (a escolher)
-    c.	Cabeçalho com borda inferior solida com 3px e cor a definir. 
-    d.	Pseudo class das linhas (tr) alterando a cor de fundo para a linha selecionada.
-    e.	Texto com tamanho em 1em.
-    f.	As células devem ter o alinhamento vertical para parte superior (top)
-    g.	As células devem forçar a quebra palavras (wordwrap) automaticamente.
-    h.	As células devem ter seu conteúdo com alinhamento horizontal justificado (justify)
-    i.	A última linha da tabela deve ter a borda inferior solida com  1px de espessura e cor a definir.
+    b.	Cabeçalho (th) com cor de fundo (a escolher) ok
+    c.	Cabeçalho com borda inferior solida com 3px e cor a definir.  ok 
+    d.	Pseudo class das linhas (tr) alterando a cor de fundo para a linha selecionada. ok
+    e.	Texto com tamanho em 1em. ok    
+    f.	As células devem ter o alinhamento vertical para parte superior (top) ok
+    g.	As células devem forçar a quebra palavras (wordwrap) automaticamente. ok 
+    h.	As células devem ter seu conteúdo com alinhamento horizontal justificado (justify) ok 
+    i.	A última linha da tabela deve ter a borda inferior solida com  1px de espessura e cor a definir. ok 
 
 b)	Todos os campos (input, textarea, select) deverão conter:
-    a.	Fonte em tamanho 1.5em.
+    a.	Fonte em tamanho 1.5em. ok
     b.	Campo que estiver sendo preenchido deve ter cor de fundo em destaque.
-    c.	Padding 5px.
+    c.	Padding 5px. ok 
     d.	Devem ter borda sólida com 1px de espessura, com cor a escura.
-    e.	Os labels devem estar em negrito.
+    e.	Os labels devem estar em negrito. ok 
 
     c)	Todo conteúdo da página deve ficar a 2em de distância das laterais esquerda e direita.
     d)	Todo conteúdo da página deve ser apresentado com a mesma fonte, que não seja a padrão do browser.

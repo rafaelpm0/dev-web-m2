@@ -10,10 +10,12 @@
   </head>
   <body>  
     <div id="modal" class="modal" >
-      <button onclick="deactivateModal()">X</button> 
-      <div id="modalContent" class="modalContent"></div>
+      <div class="modalContainer">
+        <button onclick="deactivateModal()">X</button> 
+        <div id="modalContent" class="modalContent"></div>
+      </div>
     </div>
-    <main>
+    <main class="form">
       <form id="submitForm" method="POST">
         <div class="form-fields">
           <label for="nomeObra">Nome da obra:</label>
@@ -41,7 +43,7 @@
         <button type="submit">Enviar</button>
       </form>
     </main>
-    <main>
+    <main class="table">
       <div>
         <table>
           <thead>

@@ -2,28 +2,27 @@ export function atualizarLista(dataForm, listaDeDados) {
     dataForm.innerHTML = "";
     listaDeDados.forEach((item) => {
       const row = document.createElement("tr"); // Cria uma nova linha
-      row.onclick = () => showDetalhamentoModal(item.detalhamentoObra);
       row.id = `data-row-${item.id}` // adicionar uma id para linha da lista
       
       // Cria e insere células na linha
       const cellNomeObra = document.createElement("td");
-      cellNomeObra.textContent =  item.nomeObra;
+      cellNomeObra.innerHTML = linkDetalhamento(item.detalhamentoObra, item.nomeObra);
       row.appendChild(cellNomeObra);
   
       const cellNomeAutor = document.createElement("td");
-      cellNomeAutor.innerHTML =  item.nomeAutor;
+      cellNomeAutor.innerHTML = linkDetalhamento(item.detalhamentoObra, item.nomeAutor);
       row.appendChild(cellNomeAutor);
   
       const cellAnoObra = document.createElement("td");
-      cellAnoObra.innerHTML =  item.anoObra;
+      cellAnoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.anoObra);
       row.appendChild(cellAnoObra);
   
       const cellPeriodoObra = document.createElement("td");
-      cellPeriodoObra.innerHTML =  item.periodoObra;
+      cellPeriodoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.periodoObra);
       row.appendChild(cellPeriodoObra);
   
       const cellTipoObra = document.createElement("td");
-      cellTipoObra.innerHTML =  item.tipoObra;
+      cellTipoObra.innerHTML =  linkDetalhamento(item.detalhamentoObra, item.tipoObra);
       row.appendChild(cellTipoObra);
       
       const cellButtomDelete = document.createElement("td");
