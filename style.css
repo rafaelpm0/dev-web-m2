@@ -50,17 +50,21 @@ th {
     background-color: var(--cor-cabecalho);
     border-bottom: 3px solid var(--cor-borda-cabecalho);
     text-align: left; /* Alinhamento do texto no cabeçalho */
-    padding: 10px; /* Padding do cabeçalho */
+    padding: 20px; /* Padding do cabeçalho */
     font-size: 1em; /* Tamanho da fonte no cabeçalho */
 }
 
 td {
-    padding: 20px; /* Padding das células */
+    padding: 20px;
     vertical-align: top; /* Alinhamento vertical para o topo */
     word-wrap: break-word; /* Quebra de palavras automática */
     text-align: justify; /* Alinhamento horizontal justificado */
     border-bottom: 1px solid transparent; /* Borda inferior padrão */
 }
+a {
+    padding: 20px; /* Padding das células */ 
+ }
+
 
 tr:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Cor de fundo ao selecionar a linha */

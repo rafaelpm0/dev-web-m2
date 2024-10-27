@@ -29,14 +29,12 @@ Uma vez que os dados estiverem validados estes devem ser registrados em uma tabe
 
 
 OBS 2 bugs pendente: 1 - ajustar a validação do ano 2 - ao validar esta adicionando 2 vezes a obra - ok
-OBS, ACHEI 1 BUG, AO CLICAR EM REMOVER ELE NÃO REMOVE
-OBS, FIQUEI COM PREGUIÇA DE DESCOBRIR COMO FAZER O 'X' quando aperta o botão de remover e quando aparece as informações, terá de ser
-feito depois
+
 4)	Tema CSS: Aplicar o tema de estilo desenvolvido durante a M2 nas atividades da disciplina (Arquivo – Atividade 6). -NA TEOIRA TA OK, 
 SEGUINDO AS ESPECIFICAÇÕES
 1. Crie uma biblioteca (tema) CSS com as seguintes características:
     a)	Todas as tabelas deverão conter:
-    a.	Padding das células (td) de 20px
+    a.	Padding das células (td) de 20px ok 
     b.	Cabeçalho (th) com cor de fundo (a escolher)
     c.	Cabeçalho com borda inferior solida com 3px e cor a definir. 
     d.	Pseudo class das linhas (tr) alterando a cor de fundo para a linha selecionada.
