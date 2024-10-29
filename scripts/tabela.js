@@ -87,8 +87,7 @@ export function atualizarLista(dataForm, listaDeDados) {
       if(detalhamento === ""){
         detalhamento = "Detalhamento não informado";
       }
-      div.innerHTML = `<p>${detalhamento}</p>
-      <button class='btn btn-primary' onclick='deactivateModal()'>Fechar</button>`;
+      div.innerHTML = `<h2>Detalhamento:</h2><p>${detalhamento}</p>`;
       modal.className = "modal active";
       modalContent.innerHTML = "";
       modalContent.appendChild(div);
