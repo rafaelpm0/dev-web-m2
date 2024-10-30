@@ -95,6 +95,10 @@ input, textarea, select {
     background-color: var(--cor-fundo-formulario); /* Cor de fundo padrão */
 }
 
+textarea{
+    min-height: 150px;
+}
+
 input:focus, textarea:focus, select:focus {
     background-color: var(--cor-fundo-formulario); /* Cor de fundo em destaque ao preencher */
 }

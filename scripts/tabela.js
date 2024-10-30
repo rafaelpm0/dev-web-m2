@@ -74,11 +74,6 @@ export function atualizarLista(dataForm, listaDeDados) {
       
     }
 
-    export function deletarObra(id){
-      document.getElementById(`data-row-${id}`).remove();
-      deactivateModal();
-    }
-
     export function showDetalhamentoModal(detalhamento){
       const modal = document.getElementById("modal");
       const modalContent = document.getElementById("modalContent");

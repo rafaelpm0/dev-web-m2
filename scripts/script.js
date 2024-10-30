@@ -1,4 +1,4 @@
-import { deactivateModal, deletarObraModal, deletarObra, showDetalhamentoModal } from "./tabela.js";
+import { atualizarLista, deactivateModal, deletarObraModal, showDetalhamentoModal } from "./tabela.js";
 import { handleForm } from "./validacao.js";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -31,6 +31,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
     handleForm(dataForm, listaDeDados, dataObra); // a inclusão na tabela e na lista esta dentro de esta dentro da função
     
   });
+
+  function deletarObra(id){
+
+    const index = listaDeDados.findIndex((item)=> item.id === id)
+    if(index !== -1){
+      listaDeDados.splice(index, 1);
+      console.log("feito")
+    }
+    
+    console.log(listaDeDados, index, id)
+    atualizarLista(dataForm, listaDeDados);
+    deactivateModal();
+  }
 
   window.deactivateModal = deactivateModal;
   window.deletarObraModal = deletarObraModal;
